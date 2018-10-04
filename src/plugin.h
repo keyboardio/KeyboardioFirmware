@@ -41,6 +41,14 @@ class Plugin {
 
   _FOR_EACH_EVENT_HANDLER(DEFINE_AND_IMPLEMENT_EVENT_HANDLER_METHOD)
 
+  const uint16_t persistentDataSize() {
+    return 0;
+  }
+
+  const __FlashStringHelper *name() {
+    return F("<unknown>");
+  }
+
 #undef DEFINE_AND_IMPLEMENT_EVENT_HANDLER_METHOD
 };
 

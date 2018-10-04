@@ -44,6 +44,7 @@ void setup();
 #include "kaleidoscope_internal/event_dispatch.h"
 #include "macro_helpers.h"
 #include "plugin.h"
+#include "kaleidoscope/storage.h"
 
 #define HOOK_MAX 64
 
