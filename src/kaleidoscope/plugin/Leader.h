@@ -17,15 +17,19 @@
 
 #pragma once
 
-#include "kaleidoscope/Runtime.h"
-#include <Kaleidoscope-Ranges.h>
+#include <stdint.h>                             // for uint8_t, uint16_t
+#include "kaleidoscope/KeyAddr.h"               // for KeyAddr
+#include "kaleidoscope/event_handler_result.h"  // for EventHandlerResult
+#include "kaleidoscope/key_defs.h"              // for Key, Key_NoKey
+#include "kaleidoscope/plugin.h"                // for Plugin
+#include "Kaleidoscope-Ranges.h"
 
 #define LEADER_MAX_SEQUENCE_LENGTH 4
 
 #define LEAD(n) Key(kaleidoscope::ranges::LEAD_FIRST + n)
 
 #define LEADER_SEQ(...) { __VA_ARGS__, Key_NoKey }
-#define LEADER_DICT(...) { __VA_ARGS__, {{Key_NoKey}, NULL} }
+#define LEADER_DICT(...) { __VA_ARGS__, {{Key_NoKey}, nullptr} }
 
 namespace kaleidoscope {
 namespace plugin {
